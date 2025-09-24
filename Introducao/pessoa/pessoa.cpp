@@ -24,8 +24,7 @@ int main(){
     scanf("%s %d %d", jonson.nome, &jonson.nascimento, &anoAtual);
     int idade = jonson.idade(anoAtual);
 
-    if (idade < 0) return 0;
-    else printf("a idade %s é %d ano(s)\n", jonson.nome, idade);
+    printf("%d\n", idade);
 
     return 0;
 }

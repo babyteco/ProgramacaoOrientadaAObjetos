@@ -9,24 +9,27 @@ public:
 
     void deposito(float valor){
         if(valor <= 0){
-            printf("VALOR INVALIDO\n");
+            printf("VALOR INVALIDO\n%f\n", this->saldo);
             return;
         }
 
         this->saldo += valor;
+        printf("%f\n", this->saldo);
     }
+
     void saque(float valor){
         if(valor <= 0){
-            printf("VALOR INVALIDO\n");
+            printf("VALOR INVALIDO\n%f\n", this->saldo);
             return;
         }
 
         if(valor > this->saldo){
-            printf("SALDO INSUFICIENTE");
+            printf("SALDO INSUFICIENTE\n%f\n", this->saldo);
             return;
         }
 
         this->saldo -= valor;
+        printf("%f\n", this->saldo);
     }
 };
 
@@ -36,18 +39,16 @@ int main(){
     c.saldo = 0;
 
     int N;
-    scanf("%d", &N);
+    scanf("%d\n", &N);
 
     for (int i = 0; i < N; i++){
         char operacao;
         int valor;
         scanf("%c %d\n", &operacao, &valor);
 
-        if (!strcmp(&operacao, "D")){
-            printf("depositou\n");
+        if (operacao == 'D'){
             c.deposito(valor);
-        } else if (!strcmp(&operacao, "S")){
-            printf("sacou\n");
+        } else if (operacao == 'S'){
             c.saque(valor);
         }
     }
