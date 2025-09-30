@@ -9,27 +9,27 @@ public:
 
     void deposito(float valor){
         if(valor <= 0){
-            printf("VALOR INVALIDO\n%f\n", this->saldo);
+            printf("VALOR INVALIDO\n%.0f\n", this->saldo);
             return;
         }
 
         this->saldo += valor;
-        printf("%f\n", this->saldo);
+        printf("%.0f\n", this->saldo);
     }
 
     void saque(float valor){
         if(valor <= 0){
-            printf("VALOR INVALIDO\n%f\n", this->saldo);
+            printf("VALOR INVALIDO\n%.0f\n", this->saldo);
             return;
         }
 
         if(valor > this->saldo){
-            printf("SALDO INSUFICIENTE\n%f\n", this->saldo);
+            printf("SALDO INSUFICIENTE\n%.0f\n", this->saldo);
             return;
         }
 
         this->saldo -= valor;
-        printf("%f\n", this->saldo);
+        printf("%.0f\n", this->saldo);
     }
 };
 

@@ -17,6 +17,6 @@ public:
 int main(){
     Retangulo felipeRet;
     scanf("%f %f", &felipeRet.altura, &felipeRet.largura);
-    printf("%f %f\n", felipeRet.calculaArea(), felipeRet.calculaPerimetro());
+    printf("%.0f %.0f\n", felipeRet.calculaArea(), felipeRet.calculaPerimetro());
     return 0;
 }
